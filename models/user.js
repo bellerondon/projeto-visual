@@ -1,24 +1,22 @@
+// models/user.js
 const Sequelize = require('sequelize');
-const { sequelize } = require('.');
-module.exports = (sequelize) =>{//o mudule exporta da tabela
-    const User = sequelize.define('User', { //a classe vai ser espelada do banco de uma tabela
+module.exports = (sequelize) =>{
+    const User = sequelize.define('User',{
         id:{
-            type:Sequelize.INTEGER,
-            autoincrement: true,
-            primaryKay:true,
+            type: Sequelize.INTEGER,
+            autoicrement: true,
+            primaryKey:true,
             allowNull:false
         },
         email:{
-            type:Sequelize.STRING,
-            unique:true,
+            type: Sequelize.STRING,
+            unique: true,
             allowNull:false
         },
         password:{
             type: Sequelize.STRING,
             allowNull:false
         }
-
-        
-    }); // metodo que ainda não tem nome (anonimo) o difine cria a nossa tabela]
+    });
     return User;
 };
