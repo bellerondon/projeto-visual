@@ -21,11 +21,4 @@ router.get('/', function(req, res, next) {
 router.post('/novouser', async (req,res)=>{
   userController.createUser(req,res);
 });
-
-//rota para retornar todos os usuarios
-router.get('/allusers', async (req,res)=>{
-  userController.findAllusers(req,res);
-});
-
-
 module.exports = router;
